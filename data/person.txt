@@ -1,7 +1,0 @@
-Canada411
-https://www.canada411.ca/search/advanced.html
-Search Canada411
-
-Google Dorking Guide
-https://gist.github.com/aw-junaid/cba1717689b9a1a942451b774085aa32
-Google dorking cheatsheet
