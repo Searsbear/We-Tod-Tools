@@ -1,0 +1,37 @@
+Find My [[Landlord]]
+https://findmylandlord.netlify.app/
+Search Landlord
+
+Find Building Owner, Total Units, Property Value, Potential Business Name
+https://montreal.ca/en/how-to/check-property-assessment-rolls
+Search Property Rolls
+
+Canada Post Building Unit Count
+https://www.canadapost-postescanada.ca/ac/
+Search using Address Complete
+
+Rental Tools
+	Rental Registry
+	https://rentalregistry.ca/en/qc
+	Registry of current and past rent prices
+       
+	Like Home
+	http://likehome.info/neighbourhoods/
+	Map for finding neighborhood apartment prices/livability
+
+	Ville de MTL Sanitation, Maintenance and Safety Dwellings
+	https://montreal.ca/en/topics/sanitation-maintenance-and-safety-dwellings
+	Find information about building safety and maintenance
+
+	Rate the Landlord
+	https://ratethelandlord.org/
+	Find information about landlord ratings and reviews
+
+	Locataire.info Rent Increase
+	https://locataire.info/calcul/
+	Rent Increase Estimation Calculator
+
+	Jolicoeur 2026
+	http://jolicoeurmtl.com/loyer
+	Rent Increase Estimation Calculator
+                            
