@@ -1,37 +1,31 @@
-Find My [[Landlord]]
+​Trouver mon [[Propriétaire]]
 https://findmylandlord.netlify.app/
-Search Landlord
+Rechercher un propriétaire
 
-Find Building Owner, Total Units, Property Value, Potential Business Name
+​Trouver le propriétaire de l'immeuble, le nombre total d'unités, la valeur foncière, le nom commercial potentiel
 https://montreal.ca/en/how-to/check-property-assessment-rolls
-Search Property Rolls
+Consulter le rôle d'évaluation foncière
 
-Canada Post Building Unit Count
+​Nombre d'unités de l'immeuble selon Postes Canada
 https://www.canadapost-postescanada.ca/ac/
-Search using Address Complete
+Rechercher en utilisant l'outil Adresse complète
 
-Rental Tools
-	Rental Registry
-	https://rentalregistry.ca/en/qc
-	Registry of current and past rent prices
-       
-	Like Home
-	http://likehome.info/neighbourhoods/
-	Map for finding neighborhood apartment prices/livability
-
-	Ville de MTL Sanitation, Maintenance and Safety Dwellings
-	https://montreal.ca/en/topics/sanitation-maintenance-and-safety-dwellings
-	Find information about building safety and maintenance
-
-	Rate the Landlord
-	https://ratethelandlord.org/
-	Find information about landlord ratings and reviews
-
-	Locataire.info Rent Increase
-	https://locataire.info/calcul/
-	Rent Increase Estimation Calculator
-
-	Jolicoeur 2026
-	http://jolicoeurmtl.com/loyer
-	Rent Increase Estimation Calculator
-                            
+​Outils Locatifs
+​Registre des loyers
+https://rentalregistry.ca/en/qc
+Registre des prix des loyers actuels et passés
+​Like Home
+http://likehome.info/neighbourhoods/
+Carte pour trouver les prix des appartements et la qualité de vie par quartier
+​Salubrité, entretien et sécurité des logements - Ville de Montréal
+https://montreal.ca/en/topics/sanitation-maintenance-and-safety-dwellings
+Trouver des informations sur la sécurité et l'entretien des bâtiments
+​Rate the Landlord
+https://ratethelandlord.org/
+Trouver des évaluations et des avis sur les propriétaires
+​Locataire.info - Augmentation de loyer
+https://locataire.info/calcul/
+Calculateur d'estimation d'augmentation de loyer
+​Jolicoeur 2026
+http://jolicoeurmtl.com/loyer
+Calculateur d'estimation d'augmentation de loyer
