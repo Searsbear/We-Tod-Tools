@@ -13,8 +13,8 @@ Rechercher en utilisant l'outil Adresse complete
 Outils Locatifs
 	Registre des loyers
 	https://rentalregistry.ca/en/qc
-	Registre des prix des loyers actuels et passés
-​	
+	Registre des prix des loyers actuels et passes
+	
 	Like Home
 	http://likehome.info/neighbourhoods/
 	Carte pour trouver les prix des appartements et la qualité de vie par quartier
