@@ -121,6 +121,41 @@ const getResourceConfigs = (lang) => [
     { file: `data/${lang}/data_extras.txt`, color: 'cat-data',    header: lang === 'fr' ? 'Données et Extras' : 'Data Search and Extras' }
 ];
 
+async function downloadAllResources() {
+    const configs = getResourceConfigs(window.currentLang);
+    let combinedText = `--- TENANT RESOURCES (${window.currentLang.toUpperCase()}) ---\n`;
+    combinedText += `Generated on: ${new Date().toLocaleDateString()}\n\n`;
+
+    for (const config of configs) {
+        try {
+            const response = await fetch(config.file);
+            if (!response.ok) continue;
+            const text = await response.text();
+            
+            // Clean up the special tags [[color|text]] -> text
+            const cleanText = text
+                .replace(/\[\[.*?\|(.*?)\]\]/g, '$1')
+                .replace(/\[\[(.*?)\]\]/g, '$1');
+
+            combinedText += `=== ${config.header.toUpperCase()} ===\n`;
+            combinedText += cleanText + "\n\n";
+        } catch (e) {
+            console.error("Error fetching for download:", config.file);
+        }
+    }
+
+    // Create the download link
+    const blob = new Blob([combinedText], { type: 'text/plain' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `tenant_resources_${window.currentLang}.txt`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+}
+
 // 3. HELPERS
 function updateStaticText(lang) {
     document.querySelectorAll('[data-i18n]').forEach(el => {
@@ -246,6 +281,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
             document.querySelectorAll('.lang-btn').forEach(b => b.style.borderColor = '#334155');
             btn.style.borderColor = '#6366f1';
+
+const downloadBtn = document.getElementById('download-all-btn');
+    if (downloadBtn) {
+        downloadBtn.addEventListener('click', downloadAllResources);
+    
         });
     });
 });
