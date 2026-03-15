@@ -118,7 +118,8 @@ const getResourceConfigs = (lang) => [
     { file: `data/${lang}/person.txt`, color: 'cat-person', header: lang === 'fr' ? 'Recherche de Personne' : 'Person Search, Number Search, Google Search' },
     { file: `data/${lang}/groups.txt`, color: 'cat-grocom',   header: lang === 'fr' ? 'Groupes / Communautés' : 'Groups/Communities' },
     { file: `data/${lang}/legal_reporting.txt`, color: 'cat-report',   header: lang === 'fr' ? 'Ressources Juridiques' : 'Legal Resources and Reporting' },
-    { file: `data/${lang}/data_extras.txt`, color: 'cat-data',    header: lang === 'fr' ? 'Données et Extras' : 'Data Search and Extras' }
+    { file: `data/${lang}/data_extras.txt`, color: 'cat-data',    header: lang === 'fr' ? 'Données et Extras' : 'Data Search and Extras' },
+        { file: `data/${lang}/clpmr_reources.txt`, color: 'cat-grocom',    header: lang === 'fr' ? 'Resources CLPMR' : 'CLPMR Resources' }
 ];
 
 async function downloadAllResources() {
