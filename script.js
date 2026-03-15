@@ -3,7 +3,7 @@ window.currentLang = 'en';
 
 const translations = {
     'en': {
-        'main-title': 'WE TOD RESOURCES+TOOLS',
+        'main-title': 'WE-TODD RESOURCES+TOOLS',
         'qr-header': 'QR CODE',
         'bitchat-title': 'BITCHAT',
         'bitchat-desc': 'For proximity text chat using bluetooth with no login, no phone number, no email, no data collection, and end to end encryption. Great for tenants in a building to communicate with each other without giving their info to a third party app.',
@@ -56,7 +56,7 @@ const translations = {
         '45': 'the "Invisible Tasks" guide and apartment maintenance'
     },
     'fr': {
-        'main-title': 'OUI TOD UTILES+RESSOURCES',
+        'main-title': 'OUI-TODD UTILES+RESSOURCES',
         'qr-header': 'CODE QR',
         'bitchat-title': 'BITCHAT',
         'bitchat-desc': 'Pour un chat de texte de proximité utilisant le bluetooth sans connexion, sans numéro de téléphone, sans email, sans collecte de données et avec chiffrement de bout en bout. Idéal pour les locataires d\'un immeuble pour communiquer entre eux sans donner leurs informations à une application tierce.',
