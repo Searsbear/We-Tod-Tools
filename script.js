@@ -313,7 +313,7 @@ secretWord.addEventListener("click", () => {
   }
 });
 
-const secretWord2 = document.getElementById("secret-trigger2");
+const secretWord = document.getElementById("secret-trigger2");
 const audio = document.getElementById("easterEggAudio2");
 
 secretWord.addEventListener("click", () => {
