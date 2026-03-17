@@ -289,7 +289,7 @@
         body { width: 100%; height: 100vh; background: #000; overflow: hidden; display: flex; flex-direction: column; font-family: monospace; }
         #game-container { flex: 1; display: flex; align-items: center; justify-content: center; position: relative; }
         #score-display { position: absolute; top: 10px; left: 10px; font-size: 20px; z-index: 10; }
-        canvas { border: 1px solid #222; max-width: 95vw; max-height: 50vh; backrgound: #000; }
+        canvas { border: 1px solid #222; max-width: 95vw; max-height: 50vh; }
         .controls { height: 40vh; display: grid; grid-template-areas: ". up ." "left . right" ". down ."; grid-template-columns: 1fr 1fr 1fr; grid-template-rows: 1fr 1fr 1fr; gap: 10px; padding: 20px; }
         .btn { background: #111; border: 1px solid #333; border-radius: 15px; color: var(--neon-green); font-size: 30px; display: flex; align-items: center; justify-content: center; }
         .btn:active { background: var(--neon-green); color: #000; }
@@ -305,7 +305,7 @@
 <body>
     <div id="score-display" class="gay-rainbow">SCORE: <span id="s-val">00</span></div>
     <div id="game-container"><canvas id="snakeGame" width="400" height="400"></canvas></div>
-    <div class="controls, gay-rainbow">
+    <div class="controls gay-rainbow">
         <div id="up" class="btn">▲</div><div id="left" class="btn">◀</div>
         <div id="right" class="btn">▶</div><div id="down" class="btn">▼</div>
     </div>
