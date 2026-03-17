@@ -301,28 +301,36 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-const secretWord = document.getElementById("secret-trigger");
-const audio = document.getElementById("easterEggAudio");
+// --- Easter Egg 1: Main Title ---
+const trigger1 = document.getElementById("secret-trigger");
+const audio1 = document.getElementById("easterEggAudio");
 
-secretWord.addEventListener("click", () => {
-  if (audio.paused) {
-    audio.play();
-  } else {
-    audio.pause();
-    audio.currentTime = 0; 
-  }
-});
+if (trigger1 && audio1) {
+    trigger1.addEventListener("click", () => {
+        if (audio1.paused) {
+            audio1.play();
+        } else {
+            audio1.pause();
+            audio1.currentTime = 0; 
+        }
+    });
+}
 
-const secretWord2 = document.getElementById("secret-trigger2");
+// --- Easter Egg 2: Disclaimer ---
+const trigger2 = document.getElementById("secret-trigger2");
 const audio2 = document.getElementById("easterEggAudio2");
 
-secretWord.addEventListener("click", () => {
-  if (audio.paused) {
-    audio.play();
-  } else {
-    audio.pause();
-  }
-});
+if (trigger2 && audio2) {
+    trigger2.addEventListener("click", () => {
+        if (audio2.paused) {
+            audio2.play();
+        } else {
+            audio2.pause();
+            audio2.currentTime = 0;
+        }
+    });
+}
+
 
 
 
