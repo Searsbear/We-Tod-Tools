@@ -331,6 +331,21 @@ if (trigger2 && audio2) {
     });
 }
 
+// --- Easter Egg 3: Disclaimer ---
+const trigger3 = document.getElementById("secret-trigger3");
+const audio3 = document.getElementById("easterEggAudio3");
+
+if (trigger3 && audio3) {
+    trigger3.addEventListener("click", () => {
+        if (audio3.paused) {
+            audio3.play();
+        } else {
+            audio3.pause();
+            audio3.currentTime = 0;
+        }
+    });
+
+
 
 
 
