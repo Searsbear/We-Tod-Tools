@@ -313,8 +313,8 @@ secretWord.addEventListener("click", () => {
   }
 });
 
-const secretWord = document.getElementById("secret-trigger2");
-const audio = document.getElementById("easterEggAudio2");
+const secretWord2 = document.getElementById("secret-trigger2");
+const audio2 = document.getElementById("easterEggAudio2");
 
 secretWord.addEventListener("click", () => {
   if (audio.paused) {
