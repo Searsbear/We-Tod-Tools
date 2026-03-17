@@ -301,3 +301,17 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+const secretWord = document.getElementById("secret-trigger");
+const audio = document.getElementById("easterEggAudio");
+
+secretWord.addEventListener("click", () => {
+  if (audio.paused) {
+    audio.play();
+  } else {
+    audio.pause();
+    // Optional: Reset to beginning so it restarts on next click
+    // audio.currentTime = 0; 
+  }
+});
+
+
