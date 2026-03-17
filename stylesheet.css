@@ -284,6 +284,14 @@ textarea {
     transform: translateY(1px);
 }
 
+#secret-trigger {
+  /* Keeps the cursor looking like a text selector, not a link */
+  cursor: text; 
+  /* Ensures no accidental blue outlines if someone double-clicks it */
+  user-select: none; 
+}
+
+
 
 
 
