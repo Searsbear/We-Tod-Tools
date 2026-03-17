@@ -313,7 +313,7 @@ secretWord.addEventListener("click", () => {
   }
 });
 
-const secretWord = document.getElementById("secret-trigger2");
+const secretWord2 = document.getElementById("secret-trigger2");
 const audio = document.getElementById("easterEggAudio2");
 
 secretWord.addEventListener("click", () => {
@@ -321,8 +321,6 @@ secretWord.addEventListener("click", () => {
     audio.play();
   } else {
     audio.pause();
-    // Optional: Reset to beginning so it restarts on next click
-    // audio.currentTime = 0; 
   }
 });
 
