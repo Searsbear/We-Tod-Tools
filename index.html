@@ -307,17 +307,24 @@
     color: transparent;
     
     /* Start with a smaller background size */
-    background-size: 100% 100%;
-    animation: rainbow-radiate 3s linear infinite;
+    background-repeat: repeat;
+    background-size: 200% 200%;
+    background-position: center;
+    animation: seamless-radiate 4s linear infinite;
 }
 
-@keyframes rainbow-radiate {
+@keyframes seamless-radiate {
     0% {
-        background-size: 100% 100%;
+        transform: scale(1);
+        background-size: 200% 200%;
+    }
+    50% {
+        /* Subtle zoom helps hide the repeat */
+        transform: scale(1.02);
     }
     100% {
-        /* Expanding the size creates the "moving outward" illusion */
-        background-size: 300% 300%;
+        /* This must be a multiple that allows the colors to align perfectly */
+        background-size: 400% 400%;
     }
 }
 
