@@ -347,5 +347,17 @@ if (trigger3 && audio3) {
 }
 
 
+// --- Easter Egg 4: Disclaimer ---
+const trigger4 = document.getElementById("secret-trigger4");
+const audio4 = document.getElementById("easterEggAudio4");
 
-
+if (trigger4 && audio4) {
+    trigger4.addEventListener("click", () => {
+        if (audio4.paused) {
+            audio4.play();
+        } else {
+            audio4.pause();
+            audio4.currentTime = 0;
+        }
+    });
+}
