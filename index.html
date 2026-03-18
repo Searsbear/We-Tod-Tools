@@ -253,6 +253,7 @@
 
 </body>
 
+
 <script>
 (function() {
     let clickCount = 0;
@@ -286,57 +287,24 @@
     <style>
         :root { --neon-green: #00ff88; --neon-pink: #ff0055; }
         * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
-        body { width: 100%; height: 100vh; background: #404040; overflow: hidden; display: flex; flex-direction: column; font-family: monospace; }
+        body { width: 100%; height: 100vh; background: #000; overflow: hidden; display: flex; flex-direction: column; font-family: monospace; }
         #game-container { flex: 1; display: flex; align-items: center; justify-content: center; position: relative; }
         #score-display { position: absolute; top: 10px; left: 10px; font-size: 20px; z-index: 10; }
-        canvas { border: 1px solid #222; max-width: 95vw; max-height: 50vh; }
-        .controls { height: 40vh; display: grid; grid-template-areas: ". up ." "left . right" ". down ."; grid-template-columns: 1fr 1fr 1fr; grid-template-rows: 1fr 1fr 1fr; gap: 10px; padding: 20px; }
+        canvas { border: 1px solid #222; max-width: 95vw; max-height: 50vh; background: #000; }
+        .controls { height: 40vh; display: grid; grid-template-areas: ". up ." "left . right" ". down ."; grid-template-columns: 1fr 1fr 1fr; grid-template-rows: 1fr 1fr 1fr; gap: 10px; padding: 20px; background: #080808; }
         .btn { background: #111; border: 1px solid #333; border-radius: 15px; color: var(--neon-green); font-size: 30px; display: flex; align-items: center; justify-content: center; }
         .btn:active { background: var(--neon-green); color: #000; }
         #up { grid-area: up; } #down { grid-area: down; } #left { grid-area: left; } #right { grid-area: right; }
-        body, .gay-rainbow {
-    background: radial-gradient(circle at center, 
-        #F94D4D, #F9664D, #F97E4D, #F9974D, #F9B04D, #F9C84D, #F9E14D, #F9F94D, 
-        #E1F94D, #C8F94D, #B0F94D, #97F94D, #7EF94D, #66F94D, #4DF94D, #4DF966, 
-        #4DF97E, #4DF997, #4DF9B0, #4DF9C8, #4DF9E1, #4DF9F9, #4DE1F9, #4DC8F9, 
-        #4DB0F9, #4D97F9, #4D7EF9, #4D66F9, #4D4DF9, #664DF9, #7E4DF9, #974DF9, 
-        #B04DF9, #C84DF9, #E14DF9, #F94DF9, #F94DE1, #F94DC8, #F94DB0, #F94D97, 
-        #F94D7E, #F94D4D
-    );
-
-    height: 100vh;
-    width: 100vw;
-    background-attachment: fixed;
-    
-    /* Ensure the background is large enough to animate its position */
-    background-size: 200% 200%;
-    background-position: center;
-
-    /* 'linear' prevents the 'back and forth' easing feel */
-    animation: infinite-rotation 10s linear infinite;
-    
-    will-change: filter, background-position;
-}
-
-@keyframes infinite-rotation {
-    0% {
-        filter: hue-rotate(0deg);
-        /* Slight orbital movement to prevent it from looking static */
-        background-position: 50% 50%;
-    }
-    100% {
-        /* Rotating 360 degrees returns exactly to the start color */
-        filter: hue-rotate(360deg);
-        background-position: 50% 50%;
-    }
-}
-
-
-
+        .gay-rainbow {
+            background: linear-gradient(to right, #F94D4D, #F9B04D, #F9F94D, #4DF94D, #4D97F9, #B04DF9, #F94DF9);
+            -webkit-background-clip: text; background-clip: text; color: transparent;
+            background-size: 200% auto; animation: rainbow 3s linear infinite;
+        }
+        @keyframes rainbow { 0% { background-position: 0 0; } 100% { background-position: 200% center; } }
     </style>
 </head>
 <body>
-    <div id="score-display" style="color: black; ">SCORE: <span id="s-val">00</span></div>
+    <div id="score-display" class="gay-rainbow">SCORE: <span id="s-val">00</span></div>
     <div id="game-container"><canvas id="snakeGame" width="400" height="400"></canvas></div>
     <div class="controls">
         <div id="up" class="btn">▲</div><div id="left" class="btn">◀</div>
@@ -358,7 +326,7 @@
         function gameLoop() {
             if (!gameActive) return;
             update(); draw();
-            setTimeout(gameLoop, 135);
+            setTimeout(gameLoop, 100);
         }
 
         function update() {
@@ -416,5 +384,6 @@
     };
 })();
 </script>
+
 
 </html>
