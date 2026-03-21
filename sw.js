@@ -4,7 +4,7 @@ const CACHE_NAME = 'we-tod-cache';
 const PRE_CACHE = [
   './',
   './index.html',
-  './style.css',
+  './stylesheet.css',
   './script.js'
   // Add your CSS or JS filenames here, e.g., './style.css'
 ];
