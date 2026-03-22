@@ -275,39 +275,44 @@
 </div>
 
 
-<div id="ghostContainer" style="position: fixed; bottom: 0; left: 0; width: 100%; height: 20px; opacity: 0; background: #000; transition: opacity 0.3s;">
-    <select id="secretSelector" style="width: 150px; margin: 0 auto; display: block;">
-        <option value="" disabled selected>Select...</option>
-        <option value="show">Reveal Video</option>
-        <option value="hide">Hide Menu</option>
-    </select>
+<div id="secretMenu" style="position: fixed; bottom: -50px; left: 0; width: 100%; height: 50px; background: #222; display: flex; align-items: center; justify-content: center; transition: bottom 0.3s ease; z-index: 9999;">
+    <button id="playBtn" style="background: #444; color: white; border: 1px solid #666; padding: 5px 15px; cursor: pointer;">
+        ▶ Play Secret Video
+    </button>
 </div>
 
-<video id="secretVideo" width="400" style="display: none; position: fixed; bottom: 50px; left: 50%; transform: translateX(-50%); border: 2px solid white; box-shadow: 0 0 20px rgba(0,0,0,0.5);" controls>
+<video id="hiddenVideo" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 80%; max-width: 600px; box-shadow: 0 0 50px #000;" controls>
     <source src="suicide.mp4" type="video/mp4">
 </video>
 
-<script>
-    const ghost = document.getElementById('ghostContainer');
-    const selector = document.getElementById('secretSelector');
-    const video = document.getElementById('secretVideo');
+<div id="hitbox" style="position: fixed; bottom: 0; left: 0; width: 100%; height: 15px; cursor: default; z-index: 9998;"></div>
 
-    // Reveal the dropdown on double-click at the bottom edge
-    ghost.addEventListener('dblclick', () => {
-        ghost.style.opacity = '1';
+<script>
+    const hitbox = document.getElementById('hitbox');
+    const menu = document.getElementById('secretMenu');
+    const video = document.getElementById('hiddenVideo');
+    const playBtn = document.getElementById('playBtn');
+
+    // 1. Double-click the invisible 15px strip at the bottom to slide the menu up
+    hitbox.addEventListener('dblclick', () => {
+        menu.style.bottom = '0px'; 
     });
 
-    // Handle selection
-    selector.addEventListener('change', () => {
-        if (selector.value === 'show') {
-            video.style.display = 'block';
-            video.play();
+    // 2. Click the button to show the video and hide the menu
+    playBtn.addEventListener('click', () => {
+        video.style.display = 'block';
+        video.play();
+        menu.style.bottom = '-50px'; // Hide menu again
+    });
+
+    // Optional: Clicking the video hides it again
+    video.addEventListener('click', () => {
+        if (video.paused) {
+            video.style.display = 'none';
         }
-        // Hide the dropdown again after choice
-        ghost.style.opacity = '0';
-        selector.selectedIndex = 0;
     });
 </script>
+
 
 
 
