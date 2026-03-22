@@ -265,6 +265,20 @@
     </div>
 
 
+
+<audio id="easterEggAudio2">
+  <source src="bomber.mp3" type="audio/mpeg">
+</audio>
+
+<div style="max-width: 400px; height:auto; margin: 20px auto; padding: 10px; border: 1px solid #ccc; border-radius: 8px;">
+<span id="secret-trigger4" class="gay-rainbow"><strong>Community Chat</strong></span>
+<script type="text/javascript" src="https://yellbox.com/yellbox.js?name=searsbear"></script>
+</div>
+</div>
+
+
+
+
 <details id="secretDropdown" class="resource-group" style="position: fixed; bottom: 0; left: 0; width: 100%; z-index: 10000; opacity: 0; transition: opacity 0.3s;">
     <summary class="resource-header" style="background: #111; color: #00ff88; border-top: 1px solid #00ff88; text-align: center;">
         REVEALED: PROTECTED CONTENT
@@ -282,38 +296,6 @@
 </div>
 
 <div id="hitbox" style="position: fixed; bottom: 0; left: 0; width: 100%; height: 30px; z-index: 10001; cursor: default;"></div>
-
-
-
-<audio id="easterEggAudio2">
-  <source src="bomber.mp3" type="audio/mpeg">
-</audio>
-
-<div style="max-width: 400px; height:auto; margin: 20px auto; padding: 10px; border: 1px solid #ccc; border-radius: 8px;">
-<span id="secret-trigger4" class="gay-rainbow"><strong>Community Chat</strong></span>
-<script type="text/javascript" src="https://yellbox.com/yellbox.js?name=searsbear"></script>
-</div>
-</div>
-
-
-<audio id="easterEggAudio4">
-  <source src="Idk.mp3" type="audio/mpeg">
-</audio>
-<script>
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-      navigator.serviceWorker.register('./sw.js')
-        .then(reg => console.log('OSINT Cache Active:', reg.scope))
-        .catch(err => console.log('Service Worker failed:', err));
-    });
-  }
-</script>
-
-</body>
-
-
-
-
 <script>
     const hb = document.getElementById('hitbox');
     const sd = document.getElementById('secretDropdown');
@@ -344,6 +326,25 @@
         }
     });
 </script>
+
+
+<audio id="easterEggAudio4">
+  <source src="Idk.mp3" type="audio/mpeg">
+</audio>
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('./sw.js')
+        .then(reg => console.log('OSINT Cache Active:', reg.scope))
+        .catch(err => console.log('Service Worker failed:', err));
+    });
+  }
+</script>
+
+</body>
+
+
+
 
 
 <script>
